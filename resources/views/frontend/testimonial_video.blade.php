@@ -1,0 +1,1 @@
+{!! $testimonial->video_url !!}

@@ -1,0 +1,40 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.qi-a.com$
+RewriteRule ^(.*)$ https://www.qi-a.com/$1 [R=301,L]
+
+
+
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ ^$1 [N]
+
+RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
+RewriteRule ^(.*)$ public/$1 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ server.php
+
+
+
+
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#
+#    RewriteRule ^(.*)$ public/$1 [L]
+#</IfModule>
+
+
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#
+#   RewriteRule ^(.*)$ public/$1 [L]
+#</IfModule>
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-SSL} !on
+#RewriteCond %{HTTP_HOST} ^qi\-a\.com$
+#RewriteRule ^/?$ "https\:\/\/qi\-a\.com\/" [R=301,L]

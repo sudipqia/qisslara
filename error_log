@@ -1,0 +1,3 @@
+[25-Jul-2022 08:17:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2105344 bytes) in /home/qia/public_html/vendor/barryvdh/laravel-debugbar/src/Storage/FilesystemStorage.php on line 43
+[25-Jul-2022 15:00:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5599232 bytes) in /home/qia/public_html/vendor/barryvdh/laravel-debugbar/src/Storage/FilesystemStorage.php on line 43
+[25-Jul-2022 15:00:42 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 5599232 bytes) in /home/qia/public_html/vendor/barryvdh/laravel-debugbar/src/Storage/FilesystemStorage.php on line 43
